@@ -1,0 +1,37 @@
+.thumbnail {
+    height: 110px;
+    width: 60px;
+    border-radius: 10px;
+    padding: 6px;
+    outline: 2px solid #fff;
+  }
+  .slider-container {
+    background-color: #0d0e0f;
+    padding: 40px;
+}
+  .thumbnail:hover {
+    -ms-transform: scale(1.2); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.2);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .thumbnail {
+      height: 200px;
+      width: 190px;
+      border-radius: 14px;
+      outline: 2px solid #fff;
+      margin: 8px;
+    }
+    .thumbnail:hover {
+      -ms-transform: scale(1.2); 
+      -webkit-transform: scale(1.5);
+      transform: scale(1.1);
+    }
+  }
+
+  .carosuel{
+    display: flex;
+    flex-direction: row;
+    gap:13px;
+  }

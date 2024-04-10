@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router,Navigate, Route, Routes } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+import Home from './Pages/Home';
+// import Header from './components/Header';
+import DetailMovie from './components/DetailedMoviePage';
+import SearchItem from './Pages/SearchPage';
+import PageNotFound from './Pages/PageNotFound';
+ import TopRated from './Pages/TopRated';
+import Upcoming from './Pages/Upcoming';
+import AccountDetailsSection from './Pages/AccountDetails';
+
+const App = () => (
+  <Router>
+   
+    <Routes>
+      <Route path="/" element={<Home/>} />
+    
+    
+      <Route path="/upcoming" element={<Upcoming />} />
+      <Route path="/top-rated" element={<TopRated />} />
+      <Route path="/search" element={<SearchItem/>}/>
+      <Route path="/account" element={<AccountDetailsSection/>}/>
+      <Route path="movies/:id" element={<DetailMovie />}></Route>
+      <Route path="/not-found" element={<PageNotFound />} />
+      <Route path="*" element={<Navigate to="/not-found" />} />
+    </Routes>
+  </Router>
+);
 
 export default App;

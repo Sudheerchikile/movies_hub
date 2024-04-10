@@ -1,0 +1,47 @@
+
+  .movie-item {
+    min-width: 84px;
+    width: 30%;
+    height: 180px;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none !important;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .movie-item {
+      width: 24%;
+      max-width: 245px;
+      height: 370px;
+      padding: 10px;
+     
+      border-radius: 15px;
+    }
+  }
+  .movie-item-image {
+    width: 100%;
+    height: 80%;
+    border-radius: 8px;
+  }
+  .movie-item-image:hover {
+    -ms-transform: scale(1.1); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.1);
+  }
+  .title1{
+  
+   color: rgb(53, 9, 46);
+    font-weight: 500;
+    
+    
+  }
+  .rating{
+    color: red;
+    
+  }
